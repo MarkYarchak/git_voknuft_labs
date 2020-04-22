@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Ubuntu:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: dimgrey;
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 1000px;
+    box-shadow: -12px -8px 40px #464646;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #86509A;
+}
+
+.first-section__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 80px 10px;
+    max-height: 60px;
+}
+
+.app-logo {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+}
+
+.top-links {
+    display: flex;
+    justify-content: space-between;
+    max-height: min-content;
+    padding: 20px;
+    margin-top: -5px;
+}
+
+.top-menu {
+    display: none;
+    justify-content: flex-end;
+    min-height: 40px!important;
+    padding: 15px;
+    margin-top: -5px;
+    flex-grow: 1;
+}
+
+.menu-list {
+    padding: 10px 0;
+    transition: 0.3s;
+    background-color: black;
+}
+
+.menu-list__item {
+    padding: 9px 25px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    font-size: 13px;
+}
+
+.menu-list__item:hover {
+    transition: 0.15s;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.menu-list__item:not(:hover) {
+    transition: 0.3s;
+}
+
+.top-links__one-link {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    margin-left: 6px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.top-links__one-link > a {
+    color: inherit;
+    padding: 9px 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.top-links__one-link:hover {
+    background-color: #643A7A;
+    transition: 0.15s;
+    box-shadow: -10px -10px 30px 4px rgba(0,0,0,0.1),
+        10px 10px 30px 4px rgba(45,78,25,0.15);
+}
+
+.top-links__one-link:not(:hover) {
+    transition: 0.2s;
+}
+
+.first-section__middle {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.first-section__middle h2 {
+    max-width: 700px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+}
+
+.first-section__bottom {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.first-section__bottom button {
+    padding: 8px 15px;
+    font-size: 18px;
+    background-color: orangered;
+    color: white;
+    border: 0 solid transparent;
+}
+
+.btn3d {
+    position: relative;
+    top: -6px;
+    border: 0;
+    transition: all 40ms linear;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 6px;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+    -moz-outline-style: none;
+    outline: medium none;
+}
+
+.btn3d:active,
+.btn3d.active {
+    top: 2px;
+}
+
+.btn3d.btn-info {
+    box-shadow: 0 0 0 1px #00a5c3 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #348FD2, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+    background-color: #39B3D7;
+}
+
+.btn3d.btn-info:active,
+.btn3d.btn-info.active {
+    box-shadow: 0 0 0 1px #00a5c3 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+    background-color: #39B3D7;
+}
+
+
+
+.second-section {
+    display: flex;
+    flex-grow: 1;
+    /*min-height: 52%;*/
+    width: 100%;
+    /*background-color: #58C1A5;*/
+}
+
+.second-section img {
+    background-size: contain;
+    max-width: 100%;
+}
+
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    background-color: #484848;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    line-height: 20px;
+    text-shadow: 0 0 4px black;
+}
+
+
+@media (max-width: 600px) {
+    .first-section__top {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 830px) {
+    .top-links {
+        display: none!important;
+    }
+    .top-menu {
+        display: flex!important;
+    }
+    h2 {
+        font-size: 22px!important;
+    }
+}

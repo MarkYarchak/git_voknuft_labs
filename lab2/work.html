@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About author</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div class="first-section">
+    <div class="first-section__top">
+      <div class="app-logo">MarkApp</div>
+      <div class="top-menu">
+        <div class="top-links__one-link" @click.prevent="switchMenuDialog">
+          <a href="#"><v-icon>mdi-menu</v-icon></a>
+        </div>
+      </div>
+      <div class="top-links">
+        <div class="top-links__one-link">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="top-links__one-link">
+          <a href="about.html">About</a>
+        </div>
+        <div class="top-links__one-link">
+          <a href="work.html">Work</a>
+        </div>
+        <div class="top-links__one-link">
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="top-links__one-link">
+          <a href="contacts.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div
+      v-if="menuDialog"
+      class="menu-list"
+    >
+      <div
+        v-for="(item, index) in menuLinks"
+        :key="index"
+        class="menu-list__item"
+        @click=""
+      >
+        {{ item }}
+      </div>
+    </div>
+    <div class="first-section__middle">
+      <h2>Hi there! Subscribe to my instagram, facebook, share this website to all your friends</h2>
+    </div>
+    <div class="first-section__bottom">
+      <a href="https://www.facebook.com/profile.php?id=100008700045153&ref=bookmarks" target="_blank">
+        <button type="button" class="btn btn-info btn-lg btn3d"><span class="glyphicon glyphicon-question-sign"></span> Follow me</button>
+      </a>
+    </div>
+  </div>
+  <div class="second-section">
+    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="In work">
+  </div>
+  <div style="padding: 50px; text-align: center;">
+    <h1>My work is coding, science learning and updating skills</h1>
+  </div>
+  <footer class="page-footer">
+    <span>This page was created with imagine of author Mark Yarchak, no UI libraries used</span>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="../lab3/main.js"></script>
+</body>
+</html>
